@@ -7,16 +7,26 @@ const router = express.Router();
 /* ************************************************************************* */
 
 // Import itemControllers module for handling item-related operations
-const itemControllers = require("./controllers/itemControllers");
+const userControllers = require("./controllers/userControllers");
+const campusControllers = require("./controllers/campusControllers");
+const languageControllers = require("./controllers/languageControllers");
 
-// Route to get a list of items
-router.get("/items", itemControllers.browse);
+// Users
+router.get("/users", userControllers.browse);
+router.post("/users", userControllers.add);
 
-// Route to get a specific item by ID
-router.get("/items/:id", itemControllers.read);
+router.get("/users/:id", userControllers.read);
+router.get("/users/:id/campuses", userControllers.readByCampus);
+router.get("/users/:id/languages", userControllers.readByLanguage);
 
-// Route to add a new item
-router.post("/items", itemControllers.add);
+// Campuses
+router.get("/campuses", campusControllers.browse);
+router.post("/campuses", campusControllers.add);
+router.post("/campuses/languages", campusControllers.addLangCamp);
+
+// Languages
+router.get("/languages", languageControllers.browse);
+router.post("/languages", languageControllers.add);
 
 /* ************************************************************************* */
 

@@ -28,9 +28,12 @@ npm install
 ## Usage
 
 ```sh
-npm run dev
+npm run dev-back
 ```
 
+## Notion
+
+Si vous souhaitez refaire la demo, voilà mon lien : [PrismaJS](https://www.notion.so/anthony-gorski/PrismaJS-96041aedc81346a596ae2139e28d6548)
 
 ## Auteur
 
